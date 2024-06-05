@@ -1,0 +1,14 @@
+name: lameEnv
+channels:
+  - defaults
+dependencies:
+  - numpy
+  - pandas
+  - scipy
+  - pytest
+  - matplotlib
+  - scikit-image
+  - scikit-learn
+  - pyaml
+  - pip:
+      - imbalanced-learn

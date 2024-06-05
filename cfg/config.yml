@@ -1,0 +1,70 @@
+gait_scores_csv: "./data_files/example_dataset.csv"  # path to the gait scores
+keypoints_path: "./data_files/03_2023_keypoints"  # path to the keypoint files
+data_path: ""  # unused, left for compatibility
+
+smoothing: "outliers"  # type of smoothing
+smoothing_params:  # smoothing parameters
+  - window_length: 7
+    polyorder: 2
+  - window_length: 9
+    polyorder: 3
+
+merging: "1-2345"  # how to merge the scores
+load_model: No
+save_path: "./saves"  # path to save results
+
+model_type: LR  # classifer
+#model_type: DT
+#model_type: RF
+#model_type: SVC_L
+#model_type: MLP
+#model_type: GB
+#model_type: SVC_R
+
+flat_cv: Yes  # Flat or Nested CV
+n_folds: 5  # Number of folds
+features:  # Features to use
+  - BPM  # Back posture Measurement
+  - HBA  # Head bobbing Amplitude
+  - TRK  # Tracking distance
+  - STL_R # Stride length
+  - STD  # stance duration
+  - SWD  # swing duration
+
+use_kp:  # Keypoints to use
+  - 'Hoof'
+  - 'Nose'
+  - 'Head'
+  - 'Spine'
+
+joints:  # unused, left for compatibility
+  'LF-Leg':
+    - 'LFKnee'
+    - 'LFAnkle'
+    - 'LFHoof'
+  'RF-Leg':
+    - 'RFKnee'
+    - 'RFAnkle'
+    - 'RFHoof'
+  'LH-Leg':
+    - 'LHKnee'
+    - 'LHAnkle'
+    - 'LHHoof'
+  'RH-Leg':
+    - 'RHKnee'
+    - 'RHAnkle'
+    - 'RHHoof'
+  'Back':
+    - 'Spine1'
+    - 'Spine2'
+    - 'HeadTop'
+  'Spine3':
+    - 'Spine1'
+    - 'Spine3'
+    - 'Spine2'
+  'Spine2':
+    - 'Spine1'
+    - 'Spine2'
+  'Head':
+    - 'HeadTop'
+    - 'Nose'
