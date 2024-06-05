@@ -30,13 +30,13 @@ python train_ml.py --config cfg/config.yml
 
 You can add the path to your data in the `config.yml` file, and change the options as you wish.
 
-The `data_files` contains examples of how to structure you dataset.
+The `data_files` contains examples of how to structure your dataset.
 
 ---
 
 ### Disclaimer
 
-The code is provided as is, is not maintained, and no support is currently not provided.
+The code is provided as is, is not maintained, and support is currently not provided.
 
 If you have questions, send an email to 
 helena [dot] russello [at] wur [dot] nl.
